@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="product.Product" table="product">
+        <id name="id" type="int" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="name" column="p_name" type="string"/>
+        <property name="description" column="p_description" type="string"/>
+        <property name="count" column="count" type="int"/>
+        <property name="cost" column="cost" type="float"/>
+        <property name="seller" column="FKseller" type="string"/>
+    </class>
+
+</hibernate-mapping>
